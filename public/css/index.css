@@ -1,0 +1,47 @@
+body{
+    background-color: black;
+    color: yellow;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-title{
+    font-size: 60px;
+}
+.screen-header{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header-clock{
+    padding: 20px;
+    float: right;
+    font-size: 40px;
+}
+
+.schedule-table{
+    width: 100%;
+    text-align: center;
+    vertical-align: center;
+    font-size: 40px;
+}
+td{
+    background-color: rgba(255,255,255,0.1);
+    height: 50px;
+}
+
+.ARRIVED{
+    color: green;
+}
+
+.pending{
+    color:yellow;
+}
+
+.delayed{
+    color:orange;
+}
+
+.cancelled{
+    color: red;
+}
