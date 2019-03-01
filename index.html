@@ -6,53 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="public/css/index.css">
     <style></style>
+    <script src="public/js/jquery.min.js"></script>
   </head>
   <body>
-  <div class="screen-header"><b><span class="header-title">Bay 01 - Departures</span></b><span class="header-clock">12:00 AM</span></div>
+  <div class="screen-header"><div class="header-clock">2019/03/01 12:00 AM</div></div>
+  <div class="screen-header"><b><div class="header-title">Bay 01 - Departures</div></b></div>
   <table class="schedule-table" cellspacing="10px" cellpadding="10px">
     <tr>
       <td>TIME</td>
       <td>DESTINATION</td>
       <td>ROUTE</td>
       <td>STATUS</td>
+      <td>REMARKS</td>
     </tr>
-    <tr class="ARRIVED">
+    <tr id="row-1" class="ARRIVED">
       <td class="time-1"> 10:00 AM</td>
       <td class="destination-1">COLOMBO</td>
       <td class="route-1">100</td>
       <td class="status-1">ARRIVED</td>
     </tr>
-    <tr class="ARRIVED">
+    <tr id="row-2" class="PENDING">
       <td class="time-2"> 11:00 AM</td>
       <td class="destination-2">COLOMBO</td>
       <td class="route-2">100</td>
-      <td class="status-2">ARRIVED</td>
+      <td class="status-2">PENDING</td>
     </tr>
-    <tr class="PENDING">
-      <td class="time-3"> 12:00 AM</td>
+    <tr id="row-3" class="PENDING">
+      <td class="time-3"> 12:30 PM</td>
       <td class="destination-3">COLOMBO</td>
       <td class="route-3">100</td>
       <td class="status-3">PENDING</td>
     </tr>
-    <tr class="DELAYED">
-      <td class="time-4"> 1:00 AM</td>
+    <tr id="row-4" class="DELAYED">
+      <td class="time-4"> 1:00 PM</td>
       <td class="destination-4">COLOMBO</td>
       <td class="route-4">100</td>
       <td class="status-4">DELAYED</td>
     </tr>
-    <tr class="CANCELLED">
-      <td class="time-5"> 2:00 AM</td>
+    <tr id="row-5" class="CANCELLED">
+      <td class="time-5"> 2:00 PM</td>
       <td class="destination-5">COLOMBO</td>
       <td class="route-5">100</td>
       <td class="status-5">CANCELLED</td>
     </tr>
-    <tr class="cancelled">
+    <tr id="row-6" class="cancelled">
+      <td class="time-"></td>
+      <td class="destination-"></td>
+      <td class="route-"></td>
+      <td class="status-"></td>
+    </tr>
+    <tr  id="row-7" class="cancelled">
       <td class="time-"></td>
       <td class="destination-"></td>
       <td class="route-"></td>
       <td class="status-"></td>
     </tr>
   </table>
-
+  <script type="text/javascript" src="public/js/update-schedule.js" language="javascript"></script>
   </body>
 </html>
