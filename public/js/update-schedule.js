@@ -26,8 +26,25 @@ $( document ).ready(function() {
         $('.header-title').html(headerTitle);
     }
 
-    function update_table(responseObj){
+    function update_table(screenRows){
+        clear_data_fields();
 
+        for (let i=0; i<screenRows.length;i++){
+            screenRow=screenRows[i];
+
+            $('#row-'+(i+1)).removeClass();
+            $('#row-'+(i+1)).addClass(screenRow['status']);
+            $('.time-'+(i+1)).html(screenRow['time']);
+            $('.destination-'+(i+1)).html(screenRow['destination']);
+            $('.route-'+(i+1)).html(screenRow['route']);
+            $('.remarks-'+(i+1)).html(screenRow['remarks']);
+            $('.status-'+(i+1)).html(screenRow['status']);
+        }
+
+    }
+
+    function clear_data_fields() {
+        $('.data-field').html("");
     }
 
     get_schedule_from_server(api_url);
@@ -38,5 +55,6 @@ $( document ).ready(function() {
     self.setInterval(function(){get_schedule_from_server(api_url)},1000);
     self.setInterval(function(){update_date(last_fetched['currentDate'])},1000);
     self.setInterval(function(){update_header_title(last_fetched['screenTitle'])},1000);
+    self.setInterval(function(){update_table(last_fetched['screenRows'])},1000);
 
 });
