@@ -30,18 +30,22 @@ td{
     height: 65px;
 }
 
-.ARRIVED{
+.DEPARTED{
+    color: gray;
+}
+
+.BOARDING{
     color: green;
 }
 
-.pending{
+.PENDING{
     color:yellow;
 }
 
-.delayed{
+.DELAYED{
     color:orange;
 }
 
-.cancelled{
+.CANCELLED{
     color: red;
 }

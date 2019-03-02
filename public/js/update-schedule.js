@@ -1,5 +1,6 @@
 $( document ).ready(function() {
 
+    const switching_time=1000; //time in seconds
     let api_url="http://localhost:8080/api/screen/schedule";
 
     let last_fetched=[];
@@ -34,6 +35,7 @@ $( document ).ready(function() {
 
             $('#row-'+(i+1)).removeClass();
             $('#row-'+(i+1)).addClass(screenRow['status']);
+
             $('.time-'+(i+1)).html(screenRow['time']);
             $('.destination-'+(i+1)).html(screenRow['destination']);
             $('.route-'+(i+1)).html(screenRow['route']);
@@ -52,9 +54,9 @@ $( document ).ready(function() {
     update_header_title(last_fetched['screenTitle']);
     update_table(last_fetched);
 
-    self.setInterval(function(){get_schedule_from_server(api_url)},1000);
-    self.setInterval(function(){update_date(last_fetched['currentDate'])},1000);
-    self.setInterval(function(){update_header_title(last_fetched['screenTitle'])},1000);
-    self.setInterval(function(){update_table(last_fetched['screenRows'])},1000);
+    self.setInterval(function(){get_schedule_from_server(api_url)},switching_time);
+    self.setInterval(function(){update_date(last_fetched['currentDate'])},switching_time);
+    self.setInterval(function(){update_header_title(last_fetched['screenTitle'])},switching_time);
+    self.setInterval(function(){update_table(last_fetched['screenRows'])},switching_time);
 
 });
