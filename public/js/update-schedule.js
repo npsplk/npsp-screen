@@ -65,7 +65,7 @@ $(document).ready(function () {
                 $('.destination-' + (i + 1)).html(screen_row['destination']);
                 $('.route-' + (i + 1)).html(screen_row['route']);
                 $('.remarks-' + (i + 1)).html(screen_row['remarks']);
-                $('.status-' + (i + 1)).html(screen_row['status']);
+                switch_language('.status-' + (i + 1),screen_row['status'])
             }
         }
     }
