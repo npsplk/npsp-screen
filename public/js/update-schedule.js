@@ -76,10 +76,13 @@ $(document).ready(function () {
 
     function refresh_content() {
         get_schedule_from_server(api_url);
-        update_date(last_fetched['currentDate']);
-        update_title(last_fetched['screenTitle']);
-        update_table_headers(last_fetched['tableHeaders']);
-        update_table(last_fetched['screenRows']);
+
+        setTimeout(function () {
+            update_date(last_fetched['currentDate']);
+            update_title(last_fetched['screenTitle']);
+            update_table_headers(last_fetched['tableHeaders']);
+            update_table(last_fetched['screenRows']);
+        }, 1000);
     }
 
     refresh_content();
