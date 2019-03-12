@@ -7,12 +7,21 @@ body {
 .header-title {
     font-size: 60px;
     height: 80px;
+    text-align: center;
 }
 
 .screen-header {
     width: 100%;
     text-align: center;
     margin-bottom: 10px;
+}
+
+.screen-header-table {
+    width: 100%;
+}
+
+.screen-header-td {
+    background-color: transparent;
 }
 
 .header-clock {
@@ -39,7 +48,7 @@ td {
 }
 
 .BOARDING {
-    color: rgb(0,255,0);
+    color: rgb(0, 255, 0);
 }
 
 .PENDING {

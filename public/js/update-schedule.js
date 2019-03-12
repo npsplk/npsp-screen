@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     let switching_time = 5000; //time in seconds
-    let api_url = "http://18.191.5.172:8080/api/screen/schedule";
+    let api_url = "http://localhost:8080/api/screen/schedule";
 
     let last_fetched = [];
 
