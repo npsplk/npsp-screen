@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-    // let api_url = "http://18.191.5.172:8080/api/screen/schedule";
-
     let last_fetched = [];
 
     function switch_language(identifier, lang_list) {
