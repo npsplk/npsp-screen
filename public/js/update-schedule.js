@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
-    let switching_time = 5000; //time in seconds
-    let api_url = "http://18.191.5.172:8080/api/screen/schedule";
+    // let api_url = "http://18.191.5.172:8080/api/screen/schedule";
 
     let last_fetched = [];
 
@@ -47,6 +46,7 @@ $(document).ready(function () {
             switch_language('#header-destination', [table_headers[0][1], table_headers[1][1], table_headers[2][1]]);
             switch_language('#header-route', [table_headers[0][2], table_headers[1][2], table_headers[2][2]]);
             switch_language('#header-status', [table_headers[0][3], table_headers[1][3], table_headers[2][3]]);
+            switch_language('#header-bay', [table_headers[0][5], table_headers[1][5], table_headers[2][5]]);
         }
     }
 
@@ -66,6 +66,7 @@ $(document).ready(function () {
                 $('.remarks-' + (i + 1)).html(screen_row['remarks']);
                 switch_language('.destination-' + (i + 1), screen_row['destination']);
                 switch_language('.status-' + (i + 1), screen_row['status']);
+                switch_language('.bay-' + (i + 1), screen_row['bay']);
             }
         }
     }

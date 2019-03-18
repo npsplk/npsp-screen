@@ -23,51 +23,86 @@
 </div>
 <table class="schedule-table" cellspacing="10px" cellpadding="10px">
     <tr>
-        <td style="width: 200px" id="header-time"></td>
+        <td id="header-time" style="width: 200px" ></td>
+        <td id="header-bay" style="width: 300px"></td>
         <td id="header-destination"></td>
-        <td style="width: 250px" id="header-route"></td>
-        <td style="width: 410px" id="header-status"></td>
+        <td id="header-route" style="width: 250px"></td>
+        <td id="header-status" style="width: 410px"></td>
     </tr>
     <tr id="row-1" class="ARRIVED">
         <td class="data-field time-1"></td>
+        <td class="data-field bay-1"></td>
         <td class="data-field destination-1"></td>
         <td class="data-field route-1"></td>
         <td class="data-field status-1"></td>
     </tr>
     <tr id="row-2" class="PENDING">
         <td class="data-field time-2"></td>
+        <td class="data-field bay-2"></td>
         <td class="data-field destination-2"></td>
         <td class="data-field route-2"></td>
         <td class="data-field status-2"></td>
     </tr>
     <tr id="row-3" class="PENDING">
         <td class="data-field time-3"></td>
+        <td class="data-field bay-3"></td>
         <td class="data-field destination-3"></td>
         <td class="data-field route-3"></td>
         <td class="data-field status-3"></td>
     </tr>
     <tr id="row-4" class="DELAYED">
         <td class="data-field time-4"></td>
+        <td class="data-field bay-4"></td>
         <td class="data-field destination-4"></td>
         <td class="data-field route-4"></td>
         <td class="data-field status-4"></td>
     </tr>
     <tr id="row-5" class="CANCELLED">
         <td class="data-field time-5"></td>
+        <td class="data-field bay-5"></td>
         <td class="data-field destination-5"></td>
         <td class="data-field route-5"></td>
         <td class="data-field status-5"></td>
     </tr>
     <tr id="row-6" class="">
-        <td class="data-field time-"></td>
-        <td class="data-field destination-"></td>
-        <td class="data-field route-"></td>
-        <td class="data-field status-"></td>
+        <td class="data-field time-6"></td>
+        <td class="data-field bay-6"></td>
+        <td class="data-field destination-6"></td>
+        <td class="data-field route-6"></td>
+        <td class="data-field status-6"></td>
+    </tr>
+    <tr id="row-7" class="">
+        <td class="data-field time-7"></td>
+        <td class="data-field bay-7"></td>
+        <td class="data-field destination-7"></td>
+        <td class="data-field route-7"></td>
+        <td class="data-field status-7"></td>
+    </tr>
+    <tr id="row-8" class="">
+        <td class="data-field time-8"></td>
+        <td class="data-field bay-8"></td>
+        <td class="data-field destination-8"></td>
+        <td class="data-field route-8"></td>
+        <td class="data-field status-8"></td>
+    </tr>
+    <tr id="row-9" class="">
+        <td class="data-field time-9"></td>
+        <td class="data-field bay-9"></td>
+        <td class="data-field destination-9"></td>
+        <td class="data-field route-9"></td>
+        <td class="data-field status-9"></td>
+    </tr>
+    <tr id="row-10" class="">
+        <td class="data-field time-10"></td>
+        <td class="data-field bay-10"></td>
+        <td class="data-field destination-10"></td>
+        <td class="data-field route-10"></td>
+        <td class="data-field status-10"></td>
     </tr>
 </table>
 <script type="text/javascript">
     let switching_time = 5000; //time in seconds
-    let api_url = "http://localhost:8080/api/screen/schedule";
+    let api_url = "http://localhost:8080/api/screen/schedule-summary";
 </script>
 <script type="text/javascript" src="public/js/update-schedule.js" language="javascript"></script>
 </body>
