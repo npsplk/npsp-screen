@@ -17,9 +17,11 @@ $(document).ready(function () {
     }
 
     function get_schedule_from_server(api_url) {
+        console.log(IPAddress[0]);
         $.ajax({
             type: "GET",
             url: api_url,
+            data: {ip: IPAddress[0]},
             dataType: 'json', // json method
             success: function (response) { // If success
                 last_fetched = response;
